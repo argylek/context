@@ -1,5 +1,5 @@
 import React, {Component } from "react";
-import { Form, Card } from "semantic-ui-react";
+import { Form, Card, Button } from "semantic-ui-react";
 import { UserConsumer } from "../providers/UserProvider";
 
 
@@ -34,7 +34,7 @@ class UserForm extends Component {
     } = this.state;
     return (
 
-      <form class="form" action={this.handleSubmit}>
+      <Form class="form" onSubmit={this.handleSubmit}>
               <Form.Input
                 fluid
                 id="first"
@@ -74,8 +74,8 @@ class UserForm extends Component {
               onChange={this.handleChange}
               type="text"
               />
-        <input type="submit" value="Save" color="green inverted" />
-        </form>
+        <Button type="submit" color="green inverted">Save</Button>
+        </Form>
     );
   }
 }
