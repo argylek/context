@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import { Card, Image } from "semantic-ui-react";
 import { UserContext } from "../providers/UserProvider";
 
 
@@ -9,8 +8,7 @@ const User = () => {
     firstName,
     username,
     blerb,
-    profileImage,
-    bannerImage
+    profileImage, 
   } = useContext(UserContext);
 
   return (

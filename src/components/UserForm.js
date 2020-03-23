@@ -1,5 +1,5 @@
 import React, {Component } from "react";
-import { Form, Card, Button } from "semantic-ui-react";
+import { Form, Button } from "semantic-ui-react";
 import { UserConsumer } from "../providers/UserProvider";
 
 

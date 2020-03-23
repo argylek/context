@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 import User from "./User";
 import UserForm from "./UserForm";
-import { Button, Card } from 'semantic-ui-react'
 import banner from '../img/cover.jpg'
 
 class UserProfile extends Component {
   state = {
-    editing: true
+    editing: false
   }
   toggleEdit = () => {
     this.setState({
