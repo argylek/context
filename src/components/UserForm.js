@@ -34,7 +34,7 @@ class UserForm extends Component {
     } = this.state;
     return (
 
-      <Form class="form" onSubmit={this.handleSubmit}>
+      <Form className="form" onSubmit={this.handleSubmit}>
               <Form.Input
                 fluid
                 id="first"
@@ -98,6 +98,7 @@ const ConnectedUserForm = props => {
     </UserConsumer>
   );
 }
+
 
 
 

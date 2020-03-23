@@ -6,7 +6,7 @@ import banner from '../img/cover.jpg'
 
 class UserProfile extends Component {
   state = {
-    editing: false
+    editing: true
   }
   toggleEdit = () => {
     this.setState({

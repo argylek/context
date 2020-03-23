@@ -4,9 +4,10 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'semantic-ui-css/semantic.min.css';
 import './index.css'
-import './App.css'
+
 import { BrowserRouter, } from "react-router-dom"
-import AccountProvider from "./providers/UserProvider";;
+import AccountProvider from "./providers/UserProvider";
+import "./App.css";
 
 ReactDOM.render(
   <AccountProvider>
