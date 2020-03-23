@@ -1,5 +1,5 @@
 import React from "react";
-import profile from '../img/profile.webp'
+import profile from '../img/profile.png'
 import banner from '../img/banner.jpg'
 
 // Set Up The Initial Context

@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Card, Image } from "semantic-ui-react";
 import { UserContext } from "../providers/UserProvider";
 
+
 const User = () => {
   const {
     lastName,
@@ -13,18 +14,14 @@ const User = () => {
   } = useContext(UserContext);
 
   return (
-    <Card>
-      <Image src={bannerImage} />
-
-      <Card.Content>
-        <Card.Header>
-          <Image src={profileImage} avatar />
-          {firstName} {lastName}
-        </Card.Header>
-        <Card.Meta>@ {username}</Card.Meta>
-      </Card.Content>
-      <Card.Content>{blerb}</Card.Content>
-    </Card>
+    <div class='info'>
+        <img id="profileImage" src={profileImage} alt="profile" />
+        <div id="firstName">{firstName}</div>
+        <div id="lastName">{lastName}</div>
+        <div id="username">@{username}</div>
+        <div id="bio">{blerb}</div>
+    </div>
   );
 };
+
 export default User;

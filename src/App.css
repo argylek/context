@@ -1,5 +1,8 @@
+
 .App {
   text-align: center;
+  
+  background-color: blue;
 }
 
 .App-logo {
@@ -35,4 +38,116 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.card {
+  background: #FDF8EF;
+  box-shadow: 0 29px 14px -20px rgba(69,85,51,0.31);
+  border-radius: 20px;
+  width: 500px;
+  height: 300px;
+  z-index: 1;
+}
+.card #left{
+  width: 200px;
+  float: left;
+
+}
+.card #right{
+  width: 300px;
+  float: right;
+}
+#profileImage{
+  position: relative;
+  height: 135px;
+  border-radius: 20px 20px 0 0;
+  border-radius: 62px;
+  border: 7px solid #FDF8EF;
+  left: -15px;
+  top: -50px;
+  z-index: 2;
+}
+#coverImage{
+  position: relative;
+  height: 124px;
+  width: 500px;
+  top: -20px;
+  z-index:1
+}
+#firstName {
+  position: relative;
+  font: 24px;
+  font-weight: bold;
+  color: #2F2D2A;
+  letter-spacing: 0.53px;
+  left: 150px;
+  bottom: 140px;
+}
+.info {
+  position: relative;
+  left: 25px;
+  bottom: 20px;
+}
+
+.form {
+  position: relative;
+  width: 300px;
+  left: 200px;
+  bottom: 20px
+}
+#lastName {
+  position: relative;
+  font: 16px;
+  text-transform: uppercase;
+  color: #2F2D2A;
+  letter-spacing: 5.36;
+  left: 150px;
+  bottom: 139px;
+}
+
+#username {
+  font: 18px;
+  font-size: 18px;
+  color: #2F2D2A;
+  letter-spacing: 0.4px;
+  position: relative;
+  left: 150px;
+  bottom: 120px;
+}
+#username::before{
+  content:'';
+  display: inline-block;
+  background-image: url('./img/user.jpg');
+  /* width: 30px;
+  height: 30px; */
+  left: -30px;
+}
+
+#bio {
+  font: 14px;
+  color: #2F2D2A;
+  letter-spacing: 0.31;
+  position: relative;
+  left: 150px;
+  bottom: 110px;
+}
+#bio::before{
+  content:'';
+  display: inline-block;
+  /* background-image: url('./img/bio.png');
+  width: 10px;
+  height: 10px; */
+  left: -30px;
+}
+
+#edit {
+  background-color: #589873;
+  position: relative;
+  left: 350px;
+  top: 30px;
+  width: 70px;
+  height: 20px;
+  border-radius: 5px;
+  text-align: center;
+  z-index: 3;
 }

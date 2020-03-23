@@ -1,22 +1,22 @@
-import React from "react";
+import React, {Component } from "react";
 import { Form, Card } from "semantic-ui-react";
 import { UserConsumer } from "../providers/UserProvider";
 
-class UserForm extends React.Component {
+
+class UserForm extends Component {
   state = {
     firstName: this.props.firstName,
     lastName: this.props.lastName,
     username: this.props.username,
     blerb: this.props.blerb,
     profileImage: this.props.profileImage,
-    bannerImage: this.props.bannerImage,
-    membershipLevel: this.props.membershipLevel
+    bannerImage: this.props.bannerImage
   };
 
   handleChange = (e, { name, value }) => this.setState({ [name]: value });
 
   handleSubmit = e => {
-    console.log(this.props.firstName)
+    console.log(this.props.firstName);
     console.log(this.props.lastName);
     e.preventDefault();
     this.props.updateUser({ ...this.state });
@@ -29,59 +29,53 @@ class UserForm extends React.Component {
       lastName,
       username,
       blerb,
-      profileImage,
-      bannerImage
+      // profileImage,
+      // bannerImage
     } = this.state;
     return (
-      <Form onSubmit={this.handleSubmit}>
-        <Card>
-          <Card.Content>
-            <Card.Header>
+
+      <form class="form" action={this.handleSubmit}>
               <Form.Input
-                label="First"
+                fluid
+                id="first"
                 type="text"
                 name="firstName"
+                placeholder="first"
                 value={firstName}
                 onChange={this.handleChange}
                 required
               />
-            </Card.Header>
-            <Card.Header>
               <Form.Input
-                label="Last"
+                fluid
+                id="last"
                 type="text"
                 name="lastName"
+                placeholder="Last"
                 value={lastName}
                 onChange={this.handleChange}
                 required
               />
-            </Card.Header>
-            <Card.Meta>
-              {" "}
               <Form.Input
-                label="Change Username"
+                fluid
+                id='user'
+                placeholder="Change Username"
                 type="text"
                 name="username"
                 value={username}
                 onChange={this.handleChange}
                 required
               />
-            </Card.Meta>
-          </Card.Content>
-          <Card.Content>
-            {" "}
             <Form.Input
-              label="blerb"
+            fluid
+              placeholder="blerb"
+              id='blerb'
               name="blerb"
               value={blerb}
               onChange={this.handleChange}
-              type='text'
-            />
-          </Card.Content>
-        </Card>
-
-        <Form.Button color="green inverted">Save</Form.Button>
-      </Form>
+              type="text"
+              />
+        <input type="submit" value="Save" color="green inverted" />
+        </form>
     );
   }
 }
@@ -92,13 +86,19 @@ const ConnectedUserForm = props => {
       {value => (
         <UserForm
           {...props}
+          firstName={value.firstName}
+          lastName={value.lastName}
+          blerb={value.blerb}
+          profileImage={value.profileImage}
+          bannerImage={value.bannerImage}
           username={value.username}
-          membershipLevel={value.membershipLevel}
           updateUser={value.updateUser}
         />
       )}
     </UserConsumer>
   );
-};
+}
+
+
 
 export default ConnectedUserForm;
